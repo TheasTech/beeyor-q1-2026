@@ -1,4 +1,5 @@
 import BasePage from "../BasePage";
+import MyaccountPage from "../my-account/MyAccountPage";
 
 /**
  * login page -page object
@@ -17,8 +18,8 @@ export default class LoginPage extends BasePage {
     await this.fill("#password", password);
   }
 
-  //     async clickLoginButton(): Promise<MyaccountPage> {
-  //         await this.click("button[name='login']");
-  //         return new MyaccountPage(this.page);
-  //
+  async clickLoginButton(): Promise<MyaccountPage> {
+    await this.click("button[name='login']");
+    return new MyaccountPage(this.page);
+  }
 }
